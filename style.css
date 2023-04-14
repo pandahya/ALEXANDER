@@ -3,8 +3,8 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: "Chivo Mono";
-/*   background-color: hotpink; */
-/*   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fseamless-pink-checkered-fabric-pattern-background-texture-seamless-pink-checkered-fabric-pattern-background-texture-wallpaper-115251562.jpg&f=1&nofb=1&ipt=36242747923a85e5bda64800dfffe12b33d372138a8cad3450fb3e25143fc4f4&ipo=images"); */
+  background-color: hotpink;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fseamless-pink-checkered-fabric-pattern-background-texture-seamless-pink-checkered-fabric-pattern-background-texture-wallpaper-115251562.jpg&f=1&nofb=1&ipt=36242747923a85e5bda64800dfffe12b33d372138a8cad3450fb3e25143fc4f4&ipo=images");
   color: hotpink;
 }
 *{

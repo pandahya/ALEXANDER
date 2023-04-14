@@ -207,7 +207,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background("hotpink");
   translate(-character.x + 100, 0);
 
   //image(content[4].face, width / 2, height / 2);

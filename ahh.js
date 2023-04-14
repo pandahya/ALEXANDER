@@ -99,7 +99,7 @@ let content = [
   {
     name: "My Hoang",
     face: "./assets/MyHoang.jpeg",
-    message: "I made this game a while ago called Toss a Baby, dropping the link here when parenting gets tough: https://editor.p5js.org/hoanm825/sketches/eJhxpCAdJ"
+    message: "I made this game a while ago called Toss a Baby, dropping the link here when parenting gets tough: <a href='https://editor.p5js.org/hoanm825/sketches/eJhxpCAdJ' target='_blank' rel='noopener noreferrer'>link &rarr;</a>"
   },
   {
     name: "Anya Osipov",
@@ -144,10 +144,12 @@ function randomPos(elmnt){
       message.style.visibility = "hidden";
       message.style.width = "0px";
       message.style.height = "0px";
+      moreBtn.innerHTML = "💌";
     }else{
       message.style.visibility = "visible";
       message.style.width = "250px";
       message.style.height = "min-content";
+      moreBtn.innerHTML = "❤️";
     }
   });
 }
@@ -165,6 +167,7 @@ function dragElement(elmnt) {
       pos4 = e.clientY;
       document.onmouseup = closeDragElement;
       document.onmousemove = elementDrag;
+      box.appendChild(elmnt);
   }
 
   function elementDrag(e) {

@@ -49,6 +49,9 @@ h1{
   height: min-content;
   box-shadow: 2px 2px 2px rgba(38,38,38,0.25);
 }
+.item figure:hover{
+  cursor: move;
+}
 .item figure button{
   position: absolute;
   font-size: 2.5rem;
@@ -63,6 +66,7 @@ h1{
 }
 .item figure button:hover{
   background-color: hotpink;
+  cursor: pointer;
 }
 .item figure img{
   width: 150px;
@@ -84,4 +88,12 @@ p{
   visibility: hidden;
   overflow: hidden;
   box-shadow: 2px 2px 2px rgba(38,38,38,0.25);
+}
+a:link, a:visited{
+  color: hotpink;
+  text-decoration-line: 1px solid underline;
+}
+
+a:hover{
+  text-decoration-style: wavy;
 }

@@ -56,8 +56,8 @@ function preload() {
   willImg = loadImage("./assets/Will.jpeg");
   yipingImg = loadImage("./assets/YipingDong.jpg");
   yuchenImg = loadImage("./assets/YuchenXue.png");
-  anyaImg = loadImage("./assets/anya.jpg");
-  johnImg = loadImage("./assets/john.jpeg");
+  anyaImg = loadImage("./assets/Anya.jpg");
+  johnImg = loadImage("./assets/John.jpeg");
 
   // for (let i = 0; i < storedMessage.length; i++) {
   //   storedMessage[i].img = loadImage(storedMessage[i].face);

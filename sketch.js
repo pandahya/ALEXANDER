@@ -32,7 +32,7 @@ let platformCount = 4;
 let platforms = [];
 let characterWidth = 44;
 let characterHeight = 75;
-let chivomonoRegular;
+let font;
 let walkingImg, standingImg, poopSmImg, poopMdImg, poopLgImg;
 let content = [];
 let annaImg,
@@ -58,7 +58,7 @@ let annaImg,
   johnImg;
 
 function preload() {
-  chivomonoRegular = loadFont("./assets/ChivoMono-Regular.ttf");
+  font = loadFont("./assets/IBMPlexMono-Regular.ttf");
   walkingImg = loadImage("./assets/alexander_walk1.gif");
   poopSmImg = loadImage("./assets/poop_small.png");
   poopLgImg = loadImage("./assets/poop_large.png");
@@ -207,17 +207,23 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(255);
+  push();
+  fill(255, 105, 180)
+  rect(0,height-20, width, 40);
+  pop();
   translate(-character.x + 100, 0);
 
   //image(content[4].face, width / 2, height / 2);
 
   // Display score and message
+  push();
   textSize(24);
-  fill(0);
+  fill(255,105,180);
   text(`Score: ${score}`, 10, 50);
-  text(message, width / 2, height / 4, 200, height);
-
+  textSize(14);
+  text(message, width / 2, height / 5, 200, height);
+  pop();
   // Handle character movement
   character.update();
   character.show();
@@ -402,10 +408,10 @@ class Poop {
       this.size = 40;
       this.img = poopLgImg;
     } else {
-      this.size = 20;
+      this.size = 10;
       this.img = poopSmImg;
     }
-    this.y = height - this.size;
+    this.y = height - this.size-10;
     this.speed = 1.5;
   }
 
@@ -428,7 +434,7 @@ class Platform {
 
   show() {
     noStroke();
-    fill(0, 0, 255);
+    fill(255,105,180);
     rect(this.x, this.y - 40, this.w, this.h);
     this.x -= this.speed;
   }
@@ -448,9 +454,9 @@ function gameOver() {
 
   // Display a message to the player
   textSize(32);
-  fill(255, 0, 0);
+  fill(255, 105, 180);
   textAlign(CENTER, CENTER);
-  text("Whoops", width / 2, height / 2);
+  text("stepped in shit...", width / 2, 50);
 
   window.location.href = "./paper.html";
 }

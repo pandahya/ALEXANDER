@@ -77,7 +77,7 @@ let content = [
     message: "So excited for you to meet your baby!! I hope fatherhood is everything you have hoped for and more!!"
   },
   {
-    name: "Will Park",
+    name: "Will Piao",
     face: "./assets/Will.jpeg",
     message: "Thank you for the years of game wisdom. Congratulations on becoming a dad!"
   },
@@ -125,6 +125,7 @@ function randomPos(elmnt){
   let figCaption = document.createElement("figcaption");
   figCaption.innerHTML = elmnt.name;
   let moreBtn = document.createElement("button");
+  moreBtn.setAttribute("type", "button");
   figure.appendChild(moreBtn);
   moreBtn.innerHTML = "💌";
   let face = document.createElement("img");
@@ -139,32 +140,21 @@ function randomPos(elmnt){
   item.style.top = (box.offsetTop + randomY) + "px";
   item.style.left = (box.offsetLeft + randomX) + "px";
 
-  // moreBtn.onclick = function(){
-    moreBtn.addEventListener("mouseleave", function(){
+  
+
+  moreBtn.addEventListener("mouseup", function(){
+    if(message.style.visibility == "visible"){
         message.style.visibility = "hidden";
         message.style.width = "0px";
         message.style.height = "0px";
         moreBtn.innerHTML = "💌";
-    });
-    moreBtn.addEventListener("mouseenter", function(){
-      message.style.visibility = "visible";
-      message.style.width = "250px";
-      message.style.height = "min-content";
-      moreBtn.innerHTML = "❤️";
-    })
-  //   if(message.style.visibility == "visible"){
-  //     message.style.visibility = "hidden";
-  //     message.style.width = "0px";
-  //     message.style.height = "0px";
-  //     moreBtn.innerHTML = "💌";
-  //   }else{
-  //     message.style.visibility = "visible";
-  //     message.style.width = "250px";
-  //     message.style.height = "min-content";
-  //     moreBtn.innerHTML = "❤️";
-  //   }
-  //   console.log("btn click");
-  // };
+      }else{
+        message.style.visibility = "visible";
+        message.style.width = "250px";
+        message.style.height = "min-content";
+        moreBtn.innerHTML = "❤️";
+      }
+  })
 }
 
 let draggables = document.querySelectorAll(".item");
@@ -199,3 +189,13 @@ function dragElement(elmnt) {
       document.onmousemove = null;
   }
 }
+
+let sprite = document.querySelector("#walking");
+let moreInfo = document.querySelector("#moreInfo");
+sprite.addEventListener("click", function(){
+  if(moreInfo.style.visibility == "visible"){
+    moreInfo.style.visibility = "hidden";
+  }else{
+    moreInfo.style.visibility = "visible";
+  }
+})

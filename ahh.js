@@ -139,19 +139,32 @@ function randomPos(elmnt){
   item.style.top = (box.offsetTop + randomY) + "px";
   item.style.left = (box.offsetLeft + randomX) + "px";
 
-  moreBtn.addEventListener("click", function(){
-    if(message.style.visibility == "visible"){
-      message.style.visibility = "hidden";
-      message.style.width = "0px";
-      message.style.height = "0px";
-      moreBtn.innerHTML = "💌";
-    }else{
+  // moreBtn.onclick = function(){
+    moreBtn.addEventListener("mouseleave", function(){
+        message.style.visibility = "hidden";
+        message.style.width = "0px";
+        message.style.height = "0px";
+        moreBtn.innerHTML = "💌";
+    });
+    moreBtn.addEventListener("mouseenter", function(){
       message.style.visibility = "visible";
       message.style.width = "250px";
       message.style.height = "min-content";
       moreBtn.innerHTML = "❤️";
-    }
-  });
+    })
+  //   if(message.style.visibility == "visible"){
+  //     message.style.visibility = "hidden";
+  //     message.style.width = "0px";
+  //     message.style.height = "0px";
+  //     moreBtn.innerHTML = "💌";
+  //   }else{
+  //     message.style.visibility = "visible";
+  //     message.style.width = "250px";
+  //     message.style.height = "min-content";
+  //     moreBtn.innerHTML = "❤️";
+  //   }
+  //   console.log("btn click");
+  // };
 }
 
 let draggables = document.querySelectorAll(".item");

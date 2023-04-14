@@ -67,6 +67,7 @@ h1{
 .item figure button:hover{
   background-color: hotpink;
   cursor: pointer;
+  z-index: 2;
 }
 .item figure img{
   width: 150px;

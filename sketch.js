@@ -31,58 +31,72 @@ let width=600;
 let height= 400;
 let chivomonoRegular;
 let walkingImg, standingImg, poopSmImg, poopMdImg, poopLgImg;
-let annaImg, apurvImg, emilyImg, haotianImg, heeyaImg, heidiImg, hyacinthImg, jacksonImg, jasmineImg, krithiImg, laurenImg, leoImg, myImg, shangshangImg, sloaneImg, tanviImg, willImg, yipingImg, yuchenImg, anyaImg;
+let annaImg, apurvImg, emilyImg, haotianImg, heeyaImg, heidiImg, hyacinthImg, jacksonImg, jasmineImg, krithiImg, laurenImg, leoImg, myImg, shangshangImg, sloaneImg, tanviImg, willImg, yipingImg, yuchenImg, anyaImg, johnImg;
 function preload() {
-  chivomonoRegular = loadFont(
-    "https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/ChivoMono-Regular.ttf?v=1681413867189")
-  walkingImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/alexander_walk1.gif?v=1681413486118");
-  poopSmImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/poop_small.png?v=1681413539948");
-  poopLgImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/poop_large.png?v=1681413538935");
-  annaImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/AnnaPragman.jpeg?v=1681416341324");
-  apurvImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/Apurv.jpg?v=1681416341741");
-  emilyImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/EmilyXie.jpeg?v=1681416342266");
-  haotianImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/Haotian.jpeg?v=1681416342784");
-  heeyaImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/HeeyaMody.jpeg?v=1681416343642");
-  heidiImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/HeidiBang.jpg?v=1681416344171");
-  hyacinthImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/HyacinthWeng.png?v=1681416344717");
-  jacksonImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/Jackson.jpeg?v=1681416348036");
-  jasmineImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/JasmineChen.jpeg?v=1681416349428");
-  krithiImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/Krithi.JPG?v=1681416350008");
-  laurenImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/LaurenHiga.jpg?v=1681416475599");
-  leoImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/LeoDastur.jpeg?v=1681416477671");
-  myImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/MyHoang.jpeg?v=1681416478949");
-  shangshangImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/ShangshangLi.jpeg?v=1681416479268");
-  sloaneImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/SloaneCollins.jpeg?v=1681416479965");
-  tanviImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/TanviMishra.jpg?v=1681416480310");
-  willImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/Will.jpeg?v=1681416481271");
-  yipingImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/YipingDong.jpg?v=1681416482356");
-  yuchenImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/YuchenXue.png?v=1681416482916");
-  anyaImg = loadImage("https://cdn.glitch.global/b0514607-b053-4870-a464-7b7dc30afe59/anya.jpg?v=1681418222333");
-  
-  
-  
+  chivomonoRegular = loadFont("./assets/ChivoMono-Regular.ttf")
+  walkingImg = loadImage("./assets/alexander_walk1.gif");
+  poopSmImg = loadImage("./assets/poop_small.png");
+  poopLgImg = loadImage("./assets/poop_large.png");
+  annaImg = loadImage("./assets/AnnaPragman.jpeg");
+  apurvImg = loadImage("./assets/Apurv.jpg");
+  emilyImg = loadImage("./assets/EmilyXie.jpeg");
+  haotianImg = loadImage("./assets/Haotian.jpeg");
+  heeyaImg = loadImage("./assets/HeeyaMody.jpeg");
+  heidiImg = loadImage("./assets/HeidiBang.jpg");
+  hyacinthImg = loadImage("./assets/HyacinthWeng.png");
+  jacksonImg = loadImage("./assets/Jackson.jpeg");
+  jasmineImg = loadImage("./assets/JasmineChen.jpeg");
+  krithiImg = loadImage("./assets/Krithi.JPG");
+  laurenImg = loadImage("./assets/LaurenHiga.jpg");
+  leoImg = loadImage("./assets/LeoDastur.jpeg");
+  myImg = loadImage("./assets/MyHoang.jpeg");
+  shangshangImg = loadImage("./assets/ShangshangLi.jpeg");
+  sloaneImg = loadImage("./assets/SloaneCollins.jpeg");
+  tanviImg = loadImage("./assets/TanviMishra.jpg");
+  willImg = loadImage("./assets/Will.jpeg");
+  yipingImg = loadImage("./assets/YipingDong.jpg");
+  yuchenImg = loadImage("./assets/YuchenXue.png");
+  anyaImg = loadImage("./assets/anya.jpg");
+  johnImg = loadImage("./assets/john.jpeg");
+
   // for (let i = 0; i < storedMessage.length; i++) {
   //   storedMessage[i].img = loadImage(storedMessage[i].face);
   // }
 }
 
 let content = [
-  { face: annaImg, 
-   message: "Congratulations Alexander! You’ve been such a fun, caring and exemplary instructor. I wish you and your partner all the best of luck in this new chapter!!!" },
-  { face: emilyImg, 
-   message: "Hi Alexander, first, thank you so much for being my professor since sophomore year. You have been encouraging me and the type of work I have been doing these years and I can’t express how grateful I am— it feels like you are almost a mentor to me. It really helped alot because I am not confident in my skill sets and I’ve always feel like I am doing poorly in class because of that. I really appreciate it and I am sorry being the one who always turn in things late lol. I was able to get out of my comfort zone and actually going to events like GDC. Can’t express how thankful I am, I really hope things go smoothly for you and your family!!! 🫶🏻🫶🏻🫶🏻❤️❤️❤️" },
-  { face: jacksonImg, 
-   message: "Thanks for being a wonderful mentor! May the coming months and years treat you incredibly. " },
-  { face: jasmineImg, 
-   message: "Thank you so much for everything you taught us and everything you did for us. The best game professor ever!!!" },
-  { face: haotianImg, 
-   message: "I wish the best for my best teacher!" },
-  { face: heidiImg, 
-   message: "Hi Alexander! It was really great meeting you and having you as my professor.I have learned so much from you and appreciate all that you have done to help us grow in our academic pursuits. Congratulations on your upcoming paternal leave and I wish you and your family  all the best." },
-  { face: yuchenImg, 
-   message: "- .... .- -. -.- / -.-- --- ..- / ..-. --- .-. / . ...- . .-. -.-- - .... .. -. --...........I just randomly typed this so it doesn't mean anything:P but thank you and hope to meet you again at pop-up show, GDC, or whatever place in the future! Thanks." },
-   { face: apurvImg, 
-   message: "Congrats and happy new parenting! Thanks very much for all your help over these years. Will be in touch!" },
+  { 
+    face: annaImg, 
+    message: "Congratulations Alexander! You’ve been such a fun, caring and exemplary instructor. I wish you and your partner all the best of luck in this new chapter!!!" 
+  },
+  { 
+    face: emilyImg, 
+    message: "Hi Alexander, first, thank you so much for being my professor since sophomore year. You have been encouraging me and the type of work I have been doing these years and I can’t express how grateful I am— it feels like you are almost a mentor to me. It really helped alot because I am not confident in my skill sets and I’ve always feel like I am doing poorly in class because of that. I really appreciate it and I am sorry being the one who always turn in things late lol. I was able to get out of my comfort zone and actually going to events like GDC. Can’t express how thankful I am, I really hope things go smoothly for you and your family!!! 🫶🏻🫶🏻🫶🏻❤️❤️❤️" 
+  },
+  { 
+    face: jacksonImg,
+    message: "Thanks for being a wonderful mentor! May the coming months and years treat you incredibly. " 
+  },
+  { 
+    face: jasmineImg, 
+    message: "Thank you so much for everything you taught us and everything you did for us. The best game professor ever!!!" 
+  },
+  { 
+    face: haotianImg, 
+    message: "I wish the best for my best teacher!"
+  },
+  { 
+    face: heidiImg, 
+    message: "Hi Alexander! It was really great meeting you and having you as my professor.I have learned so much from you and appreciate all that you have done to help us grow in our academic pursuits. Congratulations on your upcoming paternal leave and I wish you and your family  all the best." 
+  },
+  { 
+    face: yuchenImg, 
+    message: "- .... .- -. -.- / -.-- --- ..- / ..-. --- .-. / . ...- . .-. -.-- - .... .. -. --...........I just randomly typed this so it doesn't mean anything:P but thank you and hope to meet you again at pop-up show, GDC, or whatever place in the future! Thanks." 
+  },
+   { 
+     face: apurvImg, 
+   message: "Congrats and happy new parenting! Thanks very much for all your help over these years. Will be in touch!" 
+   },
   {
     face: yipingImg,
     message: "Now you are done with us adult babies and it is lovely time for real baby!!"

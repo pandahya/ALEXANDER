@@ -451,6 +451,8 @@ function gameOver() {
   fill(255, 0, 0);
   textAlign(CENTER, CENTER);
   text("Whoops", width / 2, height / 2);
+
+  window.location.href = "./paper.html";
 }
 
 function collideRectRect(x1, y1, w1, h1, x2, y2, w2, h2) {

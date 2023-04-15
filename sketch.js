@@ -55,7 +55,8 @@ let annaImg,
   yipingImg,
   yuchenImg,
   anyaImg,
-  johnImg;
+  johnImg,
+  clareImg;
 
 function preload() {
   font = loadFont("./assets/IBMPlexMono-Regular.ttf");
@@ -83,6 +84,7 @@ function preload() {
   yuchenImg = loadImage("./assets/YuchenXue.png");
   anyaImg = loadImage("./assets/Anya.jpg");
   johnImg = loadImage("./assets/John.jpeg");
+  clareImg = loadImage("./assets/ClareLee.jpg");
 
   // for (let i = 0; i < storedMessage.length; i++) {
   //   storedMessage[i].img = loadImage(storedMessage[i].face);
@@ -186,6 +188,16 @@ function preload() {
       face: anyaImg,
       message: "wishing your family health and happiness in this new stage!",
     },
+    {
+      face: johnImg,
+      message:
+        "Hey Alexander, thanks for making my final year thesis fun and a return to normalcy after a crazy last few years! Wishing the best to you, your family and your newly born! Show them some cool games!",
+    },
+    {
+      face: clareImg,
+      message:
+        "Alexander!! You started us off with basic Unity and now you’re seeing our theses! Thank you for being the dopest professor from day 1 and for teaching us that failure is good. I couldn’t have gotten here without you, seriously. In that spirit, I wish you lots of fruitful failure in parenting and be sure to stock up on those dad jokes!!!",
+    },
   ];
 }
 
@@ -209,8 +221,8 @@ function setup() {
 function draw() {
   background(255);
   push();
-  fill(255, 105, 180)
-  rect(0,height-20, width, 40);
+  fill(255, 105, 180);
+  rect(0, height - 20, width, 40);
   pop();
   translate(-character.x + 100, 0);
 
@@ -219,7 +231,7 @@ function draw() {
   // Display score and message
   push();
   textSize(24);
-  fill(255,105,180);
+  fill(255, 105, 180);
   text(`Score: ${score}`, 10, 50);
   textSize(14);
   text(message, width / 2, height / 5, 200, height);
@@ -411,7 +423,7 @@ class Poop {
       this.size = 10;
       this.img = poopSmImg;
     }
-    this.y = height - this.size-10;
+    this.y = height - this.size - 10;
     this.speed = 1.5;
   }
 
@@ -434,7 +446,7 @@ class Platform {
 
   show() {
     noStroke();
-    fill(255,105,180);
+    fill(255, 105, 180);
     rect(this.x, this.y - 40, this.w, this.h);
     this.x -= this.speed;
   }
